@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import "react-alice-carousel/lib/alice-carousel.css";
 
-
 a {
   text-decoration: none;
   color: inherit;
@@ -22,3 +21,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

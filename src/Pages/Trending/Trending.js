@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import SingleContent from "../../components/SingleContent/SingleContent";
+import "./Tending.css";
 
 function Trending() {
   const [content, setContent] = useState([]);
@@ -10,7 +11,7 @@ function Trending() {
 
   const fetchTrending = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/movie/550?api_key=${process.env.REACT_APP_API_KEY}`
+      `https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}`
     );
     // if (data.status !== 200) {
     //   throw new Error(`HTTP error! status: ${data.status}`);
