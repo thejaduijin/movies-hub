@@ -18,7 +18,6 @@ function Trending() {
     // }
     // const response = await data.json();
     console.log("data", data);
-    console.log("title", data.title);
     setContent(data.results);
   };
 
@@ -28,7 +27,7 @@ function Trending() {
 
   return (
     <>
-      <span className="pageTitle">Trending</span>
+      <span className="pageTitle">Trending Now</span>
       <div className="trending">
         {content &&
           content.map((c) => (
