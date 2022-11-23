@@ -11,11 +11,11 @@ const Series = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
-  const genreforURL = useGenre(selectedGenres);
+  const genreForURL = useGenre(selectedGenres);
 
   const fetchSeries = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
+      `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreForURL}`
     );
     setContent(data.results);
     setNumOfPages(data.total_pages);
@@ -26,7 +26,7 @@ const Series = () => {
     window.scroll(0, 0);
     fetchSeries();
     // eslint-disable-next-line
-  }, [genreforURL, page]);
+  }, [genreForURL, page]);
 
   return (
     <div>
