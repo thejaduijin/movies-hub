@@ -13,16 +13,12 @@ function Trending() {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/trending/all/week?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
     );
-    // if (data.status !== 200) {
-    //   throw new Error(`HTTP error! status: ${data.status}`);
-    // }
-    // const response = await data.json();
-    console.log("data", data);
     setContent(data.results);
   };
 
   useEffect(() => {
     fetchTrending();
+    // eslint-disable-next-line
   }, [page]);
 
   return (
