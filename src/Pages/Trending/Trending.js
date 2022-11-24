@@ -7,7 +7,6 @@ import "./Tending.css";
 function Trending() {
   const [content, setContent] = useState([]);
   const [page, setPage] = useState(1);
-  console.log(page);
 
   const fetchTrending = async () => {
     const { data } = await axios.get(
